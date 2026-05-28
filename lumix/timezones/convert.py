@@ -1,32 +1,39 @@
-import sys
 from datetime import datetime
 
+_zoneinfo_available = True
 try:
     from zoneinfo import ZoneInfo, available_timezones
-
-    USE_ZONEINFO = True
 except ImportError:
     try:
         import pytz
 
-        USE_ZONEINFO = False
-        # Definisci available_timezones fittizio per compatibilità
-        if not hasattr(sys.modules[__name__], "available_timezones"):
+        _zoneinfo_available = False
 
-            def available_timezones():
-                return []
+        def available_timezones():
+            return []
 
     except ImportError:
-        print("Error: pytz not installed. Run: pip install pytz")
-        sys.exit(1)
+        _zoneinfo_available = False
+        ZoneInfo = None
+        pytz = None
+
+        def available_timezones():
+            return []
 
 
 def convert_timezone(
     dt_str: str, from_tz: str, to_tz: str, date_format: str = "%Y-%m-%d %H:%M"
 ) -> str:
     try:
-        if USE_ZONEINFO:
-            # Verifica che i fusi siano validi
+        if not _zoneinfo_available:
+            if pytz is None:
+                raise ValueError("pytz not installed")
+            from_pytz = pytz.timezone(from_tz)
+            to_pytz = pytz.timezone(to_tz)
+            dt_naive = datetime.strptime(dt_str, date_format)
+            dt_from = from_pytz.localize(dt_naive)
+            dt_to = dt_from.astimezone(to_pytz)
+        else:
             if from_tz not in available_timezones():
                 raise ValueError(f"Fuso orario non valido: {from_tz}")
             if to_tz not in available_timezones():
@@ -34,12 +41,6 @@ def convert_timezone(
             dt_naive = datetime.strptime(dt_str, date_format)
             dt_from = dt_naive.replace(tzinfo=ZoneInfo(from_tz))
             dt_to = dt_from.astimezone(ZoneInfo(to_tz))
-        else:
-            from_pytz = pytz.timezone(from_tz)
-            to_pytz = pytz.timezone(to_tz)
-            dt_naive = datetime.strptime(dt_str, date_format)
-            dt_from = from_pytz.localize(dt_naive)
-            dt_to = dt_from.astimezone(to_pytz)
         return dt_to.strftime(date_format)
     except Exception as e:
         raise ValueError(f"Errore nella conversione: {e}")

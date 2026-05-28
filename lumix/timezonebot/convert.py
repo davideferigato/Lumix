@@ -1,18 +1,17 @@
 import datetime
-import sys
 
+_zoneinfo_available = True
 try:
     from zoneinfo import ZoneInfo
-
-    USE_ZONEINFO = True
 except ImportError:
     try:
         import pytz
 
-        USE_ZONEINFO = False
+        _zoneinfo_available = False
     except ImportError:
-        print("Error: pytz not installed. Run: pip install pytz")
-        sys.exit(1)
+        _zoneinfo_available = False
+        ZoneInfo = None
+        pytz = None
 
 CITY_TIMEZONE = {
     "tokyo": "Asia/Tokyo",
@@ -29,11 +28,13 @@ def get_time_in_city(city: str) -> str:
         raise ValueError(f"Città '{city}' non trovata nel database")
     tz_name = CITY_TIMEZONE[city_lower]
     try:
-        if USE_ZONEINFO:
-            tz = ZoneInfo(tz_name)
+        if not _zoneinfo_available:
+            if pytz is None:
+                raise RuntimeError("pytz not installed")
+            tz = pytz.timezone(tz_name)
             now = datetime.datetime.now(tz)
         else:
-            tz = pytz.timezone(tz_name)
+            tz = ZoneInfo(tz_name)
             now = datetime.datetime.now(tz)
         return now.strftime("%Y-%m-%d %H:%M:%S %Z")
     except Exception as e:
