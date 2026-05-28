@@ -8,8 +8,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Tests](https://github.com/davideFerigato/lumix/actions/workflows/tests.yml/badge.svg)](https://github.com/davideFerigato/lumix/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/davideFerigato/lumix/branch/main/graph/badge.svg)](https://codecov.io/gh/davideFerigato/Lumix)
-[![Docker Pulls](https://img.shields.io/docker/pulls/davideferigato/lumix)](https://hub.docker.com/r/davideferigato/Lumix)
-[![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://davideferigato.github.io/Lumix/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/davideferigato/lumix)](https://hub.docker.com/r/davideferigato/lumix)
+[![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://davideferigato.github.io/lumix/)
 
 **Lumix** is a **modular**, **multilingual** command-line converter for physical units, digital data, time, security tools, and creative utilities.
 Designed to be **easily extensible**, it features **shell autocompletion** – all in one sleek package.
