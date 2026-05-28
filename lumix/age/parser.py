@@ -3,9 +3,9 @@
 Parser per il modulo age.
 Sintassi: <lang> age from <birth_date>
 """
-import sys
 import re
-from datetime import datetime
+import sys
+
 from .convert import calculate_age
 
 # Configurazione per lingua
@@ -85,7 +85,7 @@ def parse(lang: str, params: str):
     try:
         age = calculate_age(birth_date_str, cfg['date_format'])
         print(cfg['output'].format(age))
-    except ValueError as e:
+    except ValueError:
         print(cfg['errors']['date'])
         sys.exit(1)
 

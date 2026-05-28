@@ -1,6 +1,7 @@
 import random
 import string
 
+
 def generate_password(length: int, use_symbols: bool = False) -> str:
     """
     Genera una password casuale con la lunghezza specificata.

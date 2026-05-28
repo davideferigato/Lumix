@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 def date_diff(date1_str: str, date2_str: str, date_format: str = "%Y-%m-%d") -> dict:
     """
     Calcola la differenza tra due date.

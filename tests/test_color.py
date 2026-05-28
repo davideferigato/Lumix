@@ -1,4 +1,5 @@
-from lumix.color.convert import rgb_to_hex, hex_to_rgb
+from lumix.color.convert import hex_to_rgb, rgb_to_hex
+
 
 def test_rgb_to_hex():
     assert rgb_to_hex(255, 255, 255) == "#ffffff"

@@ -1,5 +1,7 @@
 import pytest
+
 from lumix.date.convert import convert_date
+
 
 @pytest.mark.skip(reason="Da rivedere: formati data da standardizzare")
 def test_convert_date():

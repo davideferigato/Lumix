@@ -4,7 +4,7 @@ Parser per il modulo base.
 Sintassi: <lang> base <from_kw> <from_base> <to_kw> <to_base> <value>
 """
 import sys
-import re
+
 from .convert import convert
 
 # Basi supportate
@@ -114,7 +114,7 @@ def parse(lang: str, params: str):
     # Tentativo di conversione
     try:
         result = convert(value_str, from_base, to_base)
-    except ValueError as e:
+    except ValueError:
         print(cfg['errors']['value'].format(base=from_base))
         sys.exit(1)
 

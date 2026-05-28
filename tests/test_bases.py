@@ -1,7 +1,14 @@
 
 
-import pytest
-from lumix.bases.convert import dec_to_bin, bin_to_dec, dec_to_hex, hex_to_dec, dec_to_oct, oct_to_dec
+from lumix.bases.convert import (
+    bin_to_dec,
+    dec_to_bin,
+    dec_to_hex,
+    dec_to_oct,
+    hex_to_dec,
+    oct_to_dec,
+)
+
 
 def test_dec_to_bin():
     assert dec_to_bin(42) == "101010"

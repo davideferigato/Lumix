@@ -3,8 +3,9 @@
 Parser per il modulo weight.
 Sintassi: <lang> weight <from_kw> <from_unit> <to_kw> <to_unit> <value>
 """
-import sys
 import re
+import sys
+
 from .convert import convert
 
 VALID_UNITS = ['g', 'kg', 'lb', 'oz', 'mg', 'st', 't']

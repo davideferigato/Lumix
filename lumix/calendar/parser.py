@@ -3,8 +3,9 @@
 Parser per il modulo calendar.
 Sintassi: <lang> calendar diff <date1> <date2>
 """
-import sys
 import re
+import sys
+
 from .convert import date_diff
 
 # Configurazione per lingua
@@ -85,7 +86,7 @@ def parse(lang: str, params: str):
     # Calcolo differenza
     try:
         diff = date_diff(date1_str, date2_str, cfg['date_format'])
-    except ValueError as e:
+    except ValueError:
         print(cfg['errors']['date'])
         sys.exit(1)
 

@@ -1,5 +1,6 @@
 import ipaddress
 
+
 def cidr_to_range(cidr: str) -> tuple:
     """
     Data una notazione CIDR (es. '192.168.1.0/24'), restituisce il primo e l'ultimo indirizzo IP.

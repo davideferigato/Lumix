@@ -3,8 +3,9 @@
 Parser per il modulo length.
 Sintassi: <lang> length <from_kw> <from_unit> <to_kw> <to_unit> <value>
 """
-import sys
 import re
+import sys
+
 from .convert import convert
 
 VALID_UNITS = ['m', 'km', 'cm', 'mm', 'mi', 'yd', 'ft', 'in', 'nmi']

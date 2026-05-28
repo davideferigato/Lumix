@@ -1,5 +1,6 @@
 from lumix.passwords.generate import generate_password
 
+
 def test_generate_password():
     pwd = generate_password(10)
     assert len(pwd) == 10

@@ -3,8 +3,9 @@
 Parser per il modulo data.
 Sintassi: <lang> data <from_kw> <from_unit> <to_kw> <to_unit> <value>
 """
-import sys
 import re
+import sys
+
 from .convert import convert
 
 # Unità supportate (case-insensitive)
@@ -112,7 +113,7 @@ def parse(lang: str, params: str):
     # Tentativo di conversione
     try:
         result = convert(value, from_unit, to_unit)
-    except ValueError as e:
+    except ValueError:
         print(cfg['errors']['unit'])
         sys.exit(1)
 

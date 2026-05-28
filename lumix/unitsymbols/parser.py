@@ -6,7 +6,8 @@ Esempio: en unitsymbols from W to "unit name"
          it unitsymbols da W a "nome unità"
 """
 import sys
-from .convert import get_info_by_symbol, get_info_by_name
+
+from .convert import get_info_by_name, get_info_by_symbol
 
 LANG_CONFIG = {
     'en': {

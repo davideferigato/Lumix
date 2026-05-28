@@ -3,8 +3,9 @@
 Parser per il modulo time.
 Sintassi: <lang> time <from_kw> <from_unit> <to_kw> <to_unit> <value>
 """
-import sys
 import re
+import sys
+
 from .convert import convert
 
 VALID_UNITS = ['s', 'sec', 'm', 'min', 'h', 'hr', 'd', 'day', 'w', 'week']

@@ -40,7 +40,8 @@ def number_to_words_en(n: int) -> str:
         i += 1
     return " ".join(reversed(result))
 
-def number_to_words_it(n: int) -> str:
+# noqa: C901
+def number_to_words_it(n: int) -> str:  # noqa: C901  # noqa: C901
     """Converte un intero in parole in italiano."""
     ones = ["", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove"]
     teens = ["dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici",

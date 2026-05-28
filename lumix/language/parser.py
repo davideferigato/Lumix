@@ -6,6 +6,7 @@ Esempio: en language from name to code "Italian"
          it language da nome a codice "Italiano"
 """
 import sys
+
 from .convert import code_to_name, name_to_code
 
 LANG_CONFIG = {

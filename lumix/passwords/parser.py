@@ -5,6 +5,7 @@ Sintassi: <lang> passwords generate length <N> [symbols <true|false>]
 Esempio: en passwords generate length 16 symbols true
 """
 import sys
+
 from .generate import generate_password
 
 LANG_CONFIG = {

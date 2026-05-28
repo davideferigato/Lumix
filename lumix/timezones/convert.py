@@ -1,5 +1,4 @@
 from datetime import datetime
-import sys
 
 # Tentativo di importare zoneinfo (Python 3.9+) o pytz come fallback
 try:

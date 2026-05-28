@@ -4,9 +4,10 @@ Parser per il modulo color.
 Sintassi: <lang> color from rgb to hex <r,g,b>  (con virgole)
 Oppure: <lang> color from hex to rgb <#RRGGBB>
 """
-import sys
 import re
-from .convert import rgb_to_hex, hex_to_rgb
+import sys
+
+from .convert import hex_to_rgb, rgb_to_hex
 
 LANG_CONFIG = {
     'en': {

@@ -1,4 +1,5 @@
-from lumix.iptools.convert import cidr_to_range, ip_to_bin, bin_to_ip, netmask_from_cidr
+from lumix.iptools.convert import bin_to_ip, cidr_to_range, ip_to_bin, netmask_from_cidr
+
 
 def test_cidr_to_range():
     first, last = cidr_to_range("192.168.1.0/24")

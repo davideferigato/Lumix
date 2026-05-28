@@ -1,4 +1,5 @@
-from lumix.morse.convert import text_to_morse, morse_to_text
+from lumix.morse.convert import morse_to_text, text_to_morse
+
 
 def test_text_to_morse():
     assert text_to_morse("SOS") == "... --- ..."

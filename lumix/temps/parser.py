@@ -5,8 +5,9 @@ Definisce una funzione parse(lang, params) che valida i parametri localizzati
 e invoca temps.convert(src_unit, dst_unit, value) passando sempre il valore con il punto come separatore decimale.
 """
 
-import sys
 import re
+import sys
+
 try:
     from .convert import convert
 except ImportError:

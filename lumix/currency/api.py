@@ -4,7 +4,7 @@
 
 import json
 import urllib.request
-from urllib.error import URLError, HTTPError
+from urllib.error import HTTPError, URLError
 
 
 def fetch_exchange_rate(amount: float, src: str, dst: str) -> float:

@@ -3,9 +3,10 @@
 Parser per il modulo date.
 Sintassi: <lang> date <from_kw> <from_format> <to_kw> <to_format> <date_string>
 """
-import sys
 import re
-from .convert import convert_date, FORMAT_MAP
+import sys
+
+from .convert import FORMAT_MAP, convert_date
 
 # Mappa dei formati per le regex di validazione
 FORMAT_REGEX = {

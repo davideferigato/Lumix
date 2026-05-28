@@ -1,5 +1,4 @@
 import gettext
-import os
 
 
 def get_translator(domain: str, lang: str, localedir: str):

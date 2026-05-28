@@ -1,5 +1,6 @@
 import hashlib
 
+
 def compute_hash(data: str, algorithm: str) -> str:
     """
     Calcola l'hash di una stringa usando l'algoritmo specificato.

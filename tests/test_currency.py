@@ -1,6 +1,7 @@
-import pytest
 from unittest.mock import patch
+
 from lumix.currency.convert import convert_currency
+
 
 # Il mock deve colpire il punto esatto in cui la funzione viene usata: dentro il modulo convert
 @patch("lumix.currency.convert.fetch_exchange_rate")

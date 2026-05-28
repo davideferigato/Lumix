@@ -6,7 +6,6 @@ Definisce la funzione convert(src_unit, dst_unit, val) che:
   - Converte val in float, esegue la conversione appropriata.
   - Restituisce il risultato formattato a 2 decimali.
 """
-import sys
 
 _VALID_UNITS = {'C', 'F', 'K'}
 

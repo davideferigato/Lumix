@@ -4,8 +4,9 @@ Parser per il modulo timezones.
 Sintassi: <lang> timezones <from_kw> <from_tz> <to_kw> <to_tz> <datetime>
 Esempio: en timezones from Europe/Rome to Asia/Tokyo "2025-08-02 14:00"
 """
-import sys
 import re
+import sys
+
 from .convert import convert_timezone
 
 # Mappa dei formati di data/ora per lingua

@@ -3,8 +3,9 @@
 Parser per il modulo energy.
 Sintassi: <lang> energy <from_kw> <from_unit> <to_kw> <to_unit> <value>
 """
-import sys
 import re
+import sys
+
 from .convert import convert
 
 VALID_UNITS = ['j', 'kj', 'cal', 'kcal', 'wh', 'kwh', 'ev']

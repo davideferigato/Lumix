@@ -5,11 +5,11 @@ salvando tutto il testo dopo la seconda parola in una variabile e passandolo al 
 Ora, ogni parser riceverà come primo parametro la lingua, seguito dalla stringa di input.
 Uso: python3 script.py <lang> <key> <input...>
 """
-import sys
+import argparse
 import os
 import subprocess
+import sys
 
-import argparse
 try:
     import argcomplete
 except ImportError:
@@ -210,7 +210,6 @@ def main():
     # Tutto ciò che segue la seconda parola
     rest_args = sys.argv[3:]
     # Uniamo gli argomenti extra in una singola stringa
-    params = ' '.join(rest_args) if rest_args else ''
 
     modules = PARSER_MODULES.get(lang)
     if modules is None:

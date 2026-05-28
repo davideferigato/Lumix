@@ -3,8 +3,9 @@
 Parser per il modulo power.
 Sintassi: <lang> power <from_kw> <from_unit> <to_kw> <to_unit> <value>
 """
-import sys
 import re
+import sys
+
 from .convert import convert
 
 VALID_UNITS = ['w', 'kw', 'hp']

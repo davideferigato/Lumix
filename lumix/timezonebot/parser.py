@@ -5,6 +5,7 @@ Sintassi: <lang> timezonebot what-time <città>
 Esempio: en timezonebot what-time Tokyo
 """
 import sys
+
 from .convert import what_time
 
 LANG_CONFIG = {

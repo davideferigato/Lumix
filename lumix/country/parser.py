@@ -6,7 +6,7 @@ Esempio: en country from code to name IT
          it country da codice a nome IT
 """
 import sys
-import re
+
 from .convert import code_to_name, name_to_code
 
 # Configurazione per lingua

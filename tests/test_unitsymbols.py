@@ -1,4 +1,5 @@
-from lumix.unitsymbols.convert import get_info_by_symbol, get_info_by_name
+from lumix.unitsymbols.convert import get_info_by_name, get_info_by_symbol
+
 
 def test_get_info_by_symbol():
     info = get_info_by_symbol("W")

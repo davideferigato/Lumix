@@ -3,6 +3,7 @@
 import argparse
 import gettext
 import os
+
 from .convert import convert_currency
 
 

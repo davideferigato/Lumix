@@ -1,13 +1,14 @@
 from datetime import date, datetime
 
+
 def calculate_age(birth_date_str: str, date_format: str = "%Y-%m-%d") -> int:
     """
     Calcola l'età in anni compiuti.
-    
+
     Args:
         birth_date_str: Data di nascita come stringa.
         date_format: Formato della data (default ISO).
-    
+
     Returns:
         int: Età in anni.
     """

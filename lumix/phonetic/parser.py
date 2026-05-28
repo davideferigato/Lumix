@@ -5,6 +5,7 @@ Sintassi: <lang> phonetic for <testo>
 Esempio: en phonetic for CIAO
 """
 import sys
+
 from .convert import text_to_phonetic
 
 LANG_CONFIG = {

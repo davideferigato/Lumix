@@ -3,8 +3,9 @@
 Parser per il modulo pressure.
 Sintassi: <lang> pressure <from_kw> <from_unit> <to_kw> <to_unit> <value>
 """
-import sys
 import re
+import sys
+
 from .convert import convert
 
 VALID_UNITS = ['pa', 'bar', 'atm', 'mmhg', 'psi']

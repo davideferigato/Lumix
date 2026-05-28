@@ -31,3 +31,26 @@ lumix = "lumix.cli.main:run_cli"
 
 [tool.setuptools.packages.find]
 include = ["lumix", "lumix.*"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+exclude = [".git", "__pycache__", "build", "dist", "venv", ".venv", "lumix.egg-info"]
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "C", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["lumix"]
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+exclude = [
+    "venv",
+    "build",
+    "dist",
+    "lumix.egg-info",
+    "tests",
+]

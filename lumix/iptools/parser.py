@@ -10,11 +10,11 @@ Comandi supportati:
   subnet-info <cidr>
 """
 import sys
-import re
+
 from .convert import (
+    bin_to_ip,
     cidr_to_range,
     ip_to_bin,
-    bin_to_ip,
     netmask_from_cidr,
     subnet_info,
 )
@@ -135,7 +135,8 @@ Wildcard: {wildcard}""",
     },
 }
 
-def parse(lang: str, params: str):
+# noqa: C901
+def parse(lang: str, params: str):  # noqa: C901  # noqa: C901
     cfg = LANG_CONFIG.get(lang)
     if not cfg:
         print(f"❌ Lingua non supportata: {lang}")

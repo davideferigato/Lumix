@@ -1,5 +1,7 @@
 import pytest
+
 from lumix.temps.convert import convert
+
 
 @pytest.mark.skip(reason="In attesa di allineamento tra test e implementazione")
 def test_c_to_f():

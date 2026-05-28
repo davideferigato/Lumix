@@ -5,7 +5,7 @@ Sintassi: <lang> hash <algorithm> <string>
 Esempio: en hash sha256 "hello world"
 """
 import sys
-import re
+
 from .convert import compute_hash
 
 SUPPORTED_ALGORITHMS = ['md5', 'sha1', 'sha224', 'sha256', 'sha384', 'sha512']
@@ -75,7 +75,7 @@ def parse(lang: str, params: str):
 
     try:
         hash_result = compute_hash(input_str, algorithm)
-    except ValueError as e:
+    except ValueError:
         print(cfg['errors']['algorithm'])
         sys.exit(1)
 

@@ -6,6 +6,7 @@ Esempio: en spoken from 123456
          it parlato da 123456
 """
 import sys
+
 from .convert import number_to_words
 
 LANG_CONFIG = {

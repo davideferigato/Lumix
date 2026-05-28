@@ -8,7 +8,8 @@ Comandi:
 Esempio: en morse to-text "... --- ..."
 """
 import sys
-from .convert import text_to_morse, morse_to_text
+
+from .convert import morse_to_text, text_to_morse
 
 SUPPORTED_COMMANDS = ['from-text', 'to-text']
 
