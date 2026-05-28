@@ -22,8 +22,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pytest-cov
+        pip install pytest pytest-cov pytz
         pip install -e .
+        pip install pytz
     - name: Lint with ruff
       run: |
         pip install ruff
@@ -42,5 +43,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pytest-cov pytz
+        pip install pytest pytest-cov pytz pytz
         pip install -e .
+        pip install pytz
