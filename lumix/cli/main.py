@@ -21,8 +21,9 @@ def discover_converters():
     Attualmente non usata, mantiene la mappa esplicita per stabilità.
     """
     import pkgutil
-    import lumix
     from pathlib import Path
+
+    import lumix
     converters = {}
     for module_info in pkgutil.iter_modules(lumix.__path__):
         module_name = module_info.name
