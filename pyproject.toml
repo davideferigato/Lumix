@@ -60,3 +60,7 @@ exclude = [
     "lumix.egg-info",
     "tests",
 ]
+
+[project.readme]
+content-type = "text/markdown"
+file = "README.md"
