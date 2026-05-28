@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+.github/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+site/
+docs/source/
+*.egg-info/
+.DS_Store
