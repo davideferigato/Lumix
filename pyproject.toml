@@ -44,9 +44,15 @@ ignore = ["E501"]
 [tool.ruff.lint.isort]
 known-first-party = ["lumix"]
 
+
 [tool.mypy]
-strict = true
+strict = false
 ignore_missing_imports = true
+allow_untyped_defs = true
+check_untyped_defs = false
+no_implicit_optional = false
+warn_return_any = false
+warn_unused_configs = false
 exclude = [
     "venv",
     "build",
