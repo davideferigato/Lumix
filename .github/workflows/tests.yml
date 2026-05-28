@@ -28,3 +28,14 @@ jobs:
       run: |
         pip install ruff
         ruff check lumix/ tests/
+    - name: Run tests with coverage
+      run: |
+        pytest tests/ --cov=lumix --cov-report=xml --cov-report=term
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v5
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false
