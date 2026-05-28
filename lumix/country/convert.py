@@ -63,6 +63,7 @@ _COUNTRY_NAMES = {
     },
 }
 
+
 def code_to_name(code: str, lang: str = "en") -> str:
     """
     Restituisce il nome del paese per il codice e la lingua dati.
@@ -72,6 +73,7 @@ def code_to_name(code: str, lang: str = "en") -> str:
         lang = "en"  # fallback
     code = code.upper()
     return _COUNTRY_NAMES[lang].get(code, f"Unknown code '{code}'")
+
 
 def name_to_code(name: str, lang: str = "en") -> str:
     """

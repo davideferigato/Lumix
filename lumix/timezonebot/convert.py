@@ -2,9 +2,11 @@ import datetime
 
 try:
     from zoneinfo import ZoneInfo
+
     USE_ZONEINFO = True
 except ImportError:
     import pytz
+
     USE_ZONEINFO = False
 
 CITY_TIMEZONE = {
@@ -32,6 +34,7 @@ CITY_TIMEZONE = {
     "sanfrancisco": "America/Los_Angeles",
 }
 
+
 def get_time_in_city(city: str) -> str:
     city_lower = city.lower().replace(" ", "").replace("-", "")
     if city_lower not in CITY_TIMEZONE:
@@ -47,6 +50,7 @@ def get_time_in_city(city: str) -> str:
         return now.strftime("%Y-%m-%d %H:%M:%S %Z")
     except Exception as e:
         raise RuntimeError(f"Errore nel determinare l'ora per {tz_name}: {e}")
+
 
 def what_time(city: str) -> str:
     try:

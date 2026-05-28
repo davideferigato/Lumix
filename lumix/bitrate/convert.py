@@ -13,6 +13,7 @@ _TO_BPS = {
     "tbps": 1000.0 * 1000.0 * 1000.0 * 1000.0,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di bitrate a un'altra.

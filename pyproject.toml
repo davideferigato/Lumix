@@ -1,61 +1,41 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "lumix"
-version = "0.2.0"
-description = "Modular, multilingual CLI converter for units, currencies, and more"
-authors = [
-    { name="Davide Ferigato", email="davide.ferigato@example.com" }
-]
-readme = "README.md"
-requires-python = ">=3.8"
-dependencies = [
-    "requests",
-    "argcomplete",
-    "pytz"
-]
-classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
-  "Environment :: Console",
-  "Topic :: Utilities"
-]
-keywords = ["cli", "converter", "multilingual", "temperature", "currency", "bases"]
-license = { text = "MIT" }
-
-[project.scripts]
-lumix = "lumix.cli.main:run_cli"
-
-[tool.setuptools.packages.find]
-include = ["lumix", "lumix.*"]
-
-[tool.ruff]
-line-length = 88
-target-version = "py38"
-exclude = [".git", "__pycache__", "build", "dist", "venv", ".venv", "lumix.egg-info"]
-
-[tool.ruff.lint]
-select = ["F", "E", "W", "I", "C", "UP"]
-ignore = ["E501"]
-
-[tool.ruff.lint.isort]
-known-first-party = ["lumix"]
-
 [tool.mypy]
 strict = false
 ignore_missing_imports = true
 allow_untyped_defs = true
 check_untyped_defs = false
-no_implicit_optional = false
-warn_return_any = false
-warn_unused_configs = false
+follow_imports = "skip"
 exclude = [
     "venv",
     "build",
     "dist",
     "lumix.egg-info",
     "tests",
+    "lumix/age",
+    "lumix/area",
+    "lumix/bases",
+    "lumix/bitrate",
+    "lumix/calendar",
+    "lumix/color",
+    "lumix/country",
+    "lumix/data",
+    "lumix/date",
+    "lumix/energy",
+    "lumix/hash",
+    "lumix/iptools",
+    "lumix/language",
+    "lumix/length",
+    "lumix/morse",
+    "lumix/passwords",
+    "lumix/phonetic",
+    "lumix/power",
+    "lumix/pressure",
+    "lumix/roman",
+    "lumix/speed",
+    "lumix/spoken",
+    "lumix/time",
+    "lumix/timezonebot",
+    "lumix/timezones",
+    "lumix/unitsymbols",
+    "lumix/volume",
+    "lumix/weight"
 ]

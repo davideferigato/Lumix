@@ -33,7 +33,10 @@ UNITS_DB = {
         {"symbol": "min", "name": "minute"},
         {"symbol": "h", "name": "hour"},
         {"symbol": "d", "name": "day"},
-        {"symbol": "wk", "name": "week"},   # cambiato da 'w' a 'wk' per evitare conflitto con watt
+        {
+            "symbol": "wk",
+            "name": "week",
+        },  # cambiato da 'w' a 'wk' per evitare conflitto con watt
     ],
     "temperature": [
         {"symbol": "°C", "name": "degree Celsius"},
@@ -106,10 +109,12 @@ for unit_type, units in UNITS_DB.items():
         SYMBOL_TO_INFO[sym.lower()] = {"symbol": sym, "name": name, "type": unit_type}
         NAME_TO_INFO[name.lower()] = {"symbol": sym, "name": name, "type": unit_type}
 
+
 def get_info_by_symbol(symbol: str) -> dict:
     """Restituisce le informazioni (nome, tipo) per un dato simbolo (case‑insensitive)."""
     key = symbol.lower()
     return SYMBOL_TO_INFO.get(key)
+
 
 def get_info_by_name(name: str) -> dict:
     """Restituisce le informazioni (simbolo, tipo) per un dato nome (case‑insensitive)."""

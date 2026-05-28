@@ -14,6 +14,7 @@ _TO_WATT = {
     "hp": 745.699872,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di potenza a un'altra.

@@ -6,40 +6,41 @@ Esempio: en timezonebot what-time Tokyo
 """
 import sys
 
-from .convert import what_time
+from lumix.timezonebot.convert import what_time
 
 LANG_CONFIG = {
-    'en': {
-        'cmd': 'what-time',
-        'errors': {
-            'syntax': "❌ Syntax: {lang} timezonebot what-time <city>",
+    "en": {
+        "cmd": "what-time",
+        "errors": {
+            "syntax": "❌ Syntax: {lang} timezonebot what-time <city>",
         },
     },
-    'it': {
-        'cmd': 'what-time',
-        'errors': {
-            'syntax': "❌ Sintassi: {lang} timezonebot what-time <città>",
+    "it": {
+        "cmd": "what-time",
+        "errors": {
+            "syntax": "❌ Sintassi: {lang} timezonebot what-time <città>",
         },
     },
-    'fr': {
-        'cmd': 'what-time',
-        'errors': {
-            'syntax': "❌ Syntaxe : {lang} timezonebot what-time <ville>",
+    "fr": {
+        "cmd": "what-time",
+        "errors": {
+            "syntax": "❌ Syntaxe : {lang} timezonebot what-time <ville>",
         },
     },
-    'es': {
-        'cmd': 'what-time',
-        'errors': {
-            'syntax': "❌ Sintaxis: {lang} timezonebot what-time <ciudad>",
+    "es": {
+        "cmd": "what-time",
+        "errors": {
+            "syntax": "❌ Sintaxis: {lang} timezonebot what-time <ciudad>",
         },
     },
-    'jp': {
-        'cmd': 'what-time',
-        'errors': {
-            'syntax': "❌ 構文: {lang} timezonebot what-time <都市>",
+    "jp": {
+        "cmd": "what-time",
+        "errors": {
+            "syntax": "❌ 構文: {lang} timezonebot what-time <都市>",
         },
     },
 }
+
 
 def parse(lang: str, params: str):
     cfg = LANG_CONFIG.get(lang)
@@ -48,23 +49,25 @@ def parse(lang: str, params: str):
         sys.exit(1)
 
     parts = params.split(maxsplit=1)
-    if len(parts) != 2 or parts[0] != cfg['cmd']:
-        print(cfg['errors']['syntax'].format(lang=lang))
+    if len(parts) != 2 or parts[0] != cfg["cmd"]:
+        print(cfg["errors"]["syntax"].format(lang=lang))
         sys.exit(1)
 
     city = parts[1].strip()
     # Rimuovi eventuali virgolette
-    if (city.startswith('"') and city.endswith('"')) or \
-       (city.startswith("'") and city.endswith("'")):
+    if (city.startswith('"') and city.endswith('"')) or (
+        city.startswith("'") and city.endswith("'")
+    ):
         city = city[1:-1]
 
     result = what_time(city)
     print(result)
 
-if __name__ == '__main__':
-    if len(sys.argv) != 3:
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
         print("Usage: timezonebot_parser.py <lang> '<params>'")
         sys.exit(1)
     lang = sys.argv[1]
-    params = sys.argv[2]
+    params = " ".join(sys.argv[2:])
     parse(lang, params)

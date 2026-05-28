@@ -6,8 +6,8 @@ def test_get_info_by_symbol():
     assert info["name"] == "watt"
     assert info["type"] == "power"
 
+
 def test_get_info_by_name():
     info = get_info_by_name("kilogram")
     assert info["symbol"] == "kg"
     assert info["type"] == "mass"
-

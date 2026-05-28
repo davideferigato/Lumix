@@ -1,31 +1,33 @@
-
-
-# lumix/currency/api.py
-
 import json
 import urllib.request
-from urllib.error import HTTPError, URLError
+
+# Tassi di fallback statici (es. da fixare periodicamente)
+STATIC_RATES = {
+    ("EUR", "USD"): 1.18,
+    ("USD", "EUR"): 0.85,
+    ("EUR", "GBP"): 0.86,
+    ("GBP", "EUR"): 1.16,
+    ("USD", "GBP"): 0.78,
+    ("GBP", "USD"): 1.28,
+}
 
 
 def fetch_exchange_rate(amount: float, src: str, dst: str) -> float:
-    """
-    Usa l'API di Francoforte per ottenere il valore convertito da una valuta all'altra.
-
-    :param amount: quantità da convertire
-    :param src: codice valuta sorgente (es. 'EUR')
-    :param dst: codice valuta destinazione (es. 'USD')
-    :return: valore convertito
-    """
+    # Prova prima con l'API
     url = f"https://api.frankfurter.app/latest?amount={amount}&from={src}&to={dst}"
-
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     try:
-        with urllib.request.urlopen(url) as response:
+        with urllib.request.urlopen(req) as response:
             data = json.loads(response.read().decode())
             if "rates" in data and dst in data["rates"]:
                 return data["rates"][dst]
             else:
                 raise ValueError(f"Nessun tasso trovato per {dst} nella risposta.")
-    except (URLError, HTTPError) as e:
-        raise ConnectionError(f"Errore durante la connessione all'API di Francoforte: {e}")
-    except Exception as e:
-        raise RuntimeError(f"Errore durante il parsing della risposta: {e}")
+    except Exception:
+        # Fallback: usa tassi statici
+        key = (src, dst)
+        if key in STATIC_RATES:
+            return amount * STATIC_RATES[key]
+        raise ConnectionError(
+            f"Impossibile ottenere il tasso per {src} -> {dst} (fallback non disponibile)"
+        )

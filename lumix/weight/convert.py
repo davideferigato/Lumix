@@ -28,6 +28,7 @@ _TO_GRAM = {
     "tonne": 1_000_000.0,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di peso a un'altra.
@@ -40,17 +41,25 @@ def convert(value: float, from_unit: str, to_unit: str) -> float:
     Returns:
         float: Valore convertito.
     """
-    from_norm = from_unit.lower().replace(' ', '')
-    to_norm = to_unit.lower().replace(' ', '')
+    from_norm = from_unit.lower().replace(" ", "")
+    to_norm = to_unit.lower().replace(" ", "")
 
     unit_map = {
-        'g': 'g', 'gram': 'g',
-        'kg': 'kg', 'kilogram': 'kg',
-        'lb': 'lb', 'pound': 'lb',
-        'oz': 'oz', 'ounce': 'oz',
-        'mg': 'mg', 'milligram': 'mg',
-        'st': 'st', 'stone': 'st',
-        't': 't', 'tonne': 't', 'metricton': 't',
+        "g": "g",
+        "gram": "g",
+        "kg": "kg",
+        "kilogram": "kg",
+        "lb": "lb",
+        "pound": "lb",
+        "oz": "oz",
+        "ounce": "oz",
+        "mg": "mg",
+        "milligram": "mg",
+        "st": "st",
+        "stone": "st",
+        "t": "t",
+        "tonne": "t",
+        "metricton": "t",
     }
     from_key = unit_map.get(from_norm, from_norm)
     to_key = unit_map.get(to_norm, to_norm)

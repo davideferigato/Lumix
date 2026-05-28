@@ -6,4 +6,3 @@ def test_generate_password():
     assert len(pwd) == 10
     pwd_sym = generate_password(12, use_symbols=True)
     assert len(pwd_sym) == 12
-

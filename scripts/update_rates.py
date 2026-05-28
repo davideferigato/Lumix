@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env python3
 
 """
@@ -10,6 +8,7 @@ Esegue una richiesta API e salva i risultati nel file locale.
 from lumix.currency.api import fetch_exchange_rates
 from lumix.currency.cache import save_rates
 
+
 def main():
     try:
         rates = fetch_exchange_rates()
@@ -17,6 +16,7 @@ def main():
         print("Cache aggiornata con successo.")
     except Exception as e:
         print(f"Errore durante l'aggiornamento della cache: {e}")
+
 
 if __name__ == "__main__":
     main()

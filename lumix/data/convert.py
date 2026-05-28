@@ -12,6 +12,7 @@ _TO_BYTES = {
     "tb": 1024.0 * 1024.0 * 1024.0 * 1024.0,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità digitale a un'altra.

@@ -3,12 +3,17 @@ from datetime import datetime
 # Tentativo di importare zoneinfo (Python 3.9+) o pytz come fallback
 try:
     from zoneinfo import ZoneInfo, available_timezones
+
     USE_ZONEINFO = True
 except ImportError:
     import pytz
+
     USE_ZONEINFO = False
 
-def convert_timezone(dt_str: str, from_tz: str, to_tz: str, date_format: str = "%Y-%m-%d %H:%M") -> str:
+
+def convert_timezone(
+    dt_str: str, from_tz: str, to_tz: str, date_format: str = "%Y-%m-%d %H:%M"
+) -> str:
     """
     Converte una data/ora da un fuso orario a un altro.
 

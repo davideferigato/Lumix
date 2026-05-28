@@ -11,5 +11,5 @@ def generate_password(length: int, use_symbols: bool = False) -> str:
     chars = string.ascii_letters + string.digits
     if use_symbols:
         chars += string.punctuation
-    password = ''.join(random.choice(chars) for _ in range(length))
+    password = "".join(random.choice(chars) for _ in range(length))
     return password

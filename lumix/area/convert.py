@@ -26,6 +26,7 @@ _TO_SQM = {
     "in²": 0.00064516,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di superficie a un'altra.
@@ -39,8 +40,8 @@ def convert(value: float, from_unit: str, to_unit: str) -> float:
         float: Valore convertito.
     """
     # Normalizza le unità (ignora il simbolo '²' se presente)
-    from_norm = from_unit.lower().replace('²', '2')
-    to_norm = to_unit.lower().replace('²', '2')
+    from_norm = from_unit.lower().replace("²", "2")
+    to_norm = to_unit.lower().replace("²", "2")
 
     if from_norm not in _TO_SQM or to_norm not in _TO_SQM:
         raise ValueError(f"Unità non supportata: {from_unit} o {to_unit}")

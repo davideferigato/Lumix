@@ -1,0 +1,387 @@
+.
+├── .editorconfig
+├── .flake8
+├── .github
+│   ├── ISSUE_TEMPLATE
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   ├── pull_request_template.md
+│   └── workflows
+│       ├── docker-publish.yml
+│       ├── publish.yml
+│       └── tests.yml
+├── .gitignore
+├── .mypy_cache
+│   ├── .gitignore
+│   ├── 3.9
+│   │   ├── _ast.data.json
+│   │   ├── _ast.meta.json
+│   │   ├── _codecs.data.json
+│   │   ├── _codecs.meta.json
+│   │   ├── _collections_abc.data.json
+│   │   ├── _collections_abc.meta.json
+│   │   ├── _frozen_importlib_external.data.json
+│   │   ├── _frozen_importlib_external.meta.json
+│   │   ├── _frozen_importlib.data.json
+│   │   ├── _frozen_importlib.meta.json
+│   │   ├── _io.data.json
+│   │   ├── _io.meta.json
+│   │   ├── _sitebuiltins.data.json
+│   │   ├── _sitebuiltins.meta.json
+│   │   ├── _typeshed
+│   │   │   ├── __init__.data.json
+│   │   │   ├── __init__.meta.json
+│   │   │   ├── importlib.data.json
+│   │   │   └── importlib.meta.json
+│   │   ├── @plugins_snapshot.json
+│   │   ├── abc.data.json
+│   │   ├── abc.meta.json
+│   │   ├── argparse.data.json
+│   │   ├── argparse.meta.json
+│   │   ├── ast.data.json
+│   │   ├── ast.meta.json
+│   │   ├── builtins.data.json
+│   │   ├── builtins.meta.json
+│   │   ├── codecs.data.json
+│   │   ├── codecs.meta.json
+│   │   ├── collections
+│   │   │   ├── __init__.data.json
+│   │   │   ├── __init__.meta.json
+│   │   │   ├── abc.data.json
+│   │   │   └── abc.meta.json
+│   │   ├── contextlib.data.json
+│   │   ├── contextlib.meta.json
+│   │   ├── dataclasses.data.json
+│   │   ├── dataclasses.meta.json
+│   │   ├── email
+│   │   │   ├── __init__.data.json
+│   │   │   ├── __init__.meta.json
+│   │   │   ├── _policybase.data.json
+│   │   │   ├── _policybase.meta.json
+│   │   │   ├── charset.data.json
+│   │   │   ├── charset.meta.json
+│   │   │   ├── contentmanager.data.json
+│   │   │   ├── contentmanager.meta.json
+│   │   │   ├── errors.data.json
+│   │   │   ├── errors.meta.json
+│   │   │   ├── header.data.json
+│   │   │   ├── header.meta.json
+│   │   │   ├── message.data.json
+│   │   │   ├── message.meta.json
+│   │   │   ├── policy.data.json
+│   │   │   └── policy.meta.json
+│   │   ├── enum.data.json
+│   │   ├── enum.meta.json
+│   │   ├── genericpath.data.json
+│   │   ├── genericpath.meta.json
+│   │   ├── gettext.data.json
+│   │   ├── gettext.meta.json
+│   │   ├── importlib
+│   │   │   ├── __init__.data.json
+│   │   │   ├── __init__.meta.json
+│   │   │   ├── _bootstrap_external.data.json
+│   │   │   ├── _bootstrap_external.meta.json
+│   │   │   ├── _bootstrap.data.json
+│   │   │   ├── _bootstrap.meta.json
+│   │   │   ├── abc.data.json
+│   │   │   ├── abc.meta.json
+│   │   │   ├── machinery.data.json
+│   │   │   ├── machinery.meta.json
+│   │   │   └── metadata
+│   │   │       ├── __init__.data.json
+│   │   │       └── __init__.meta.json
+│   │   ├── io.data.json
+│   │   ├── io.meta.json
+│   │   ├── lumix
+│   │   │   ├── cli
+│   │   │   │   ├── __init__.data.json
+│   │   │   │   ├── __init__.meta.json
+│   │   │   │   ├── main.data.json
+│   │   │   │   └── main.meta.json
+│   │   │   ├── common
+│   │   │   │   ├── __init__.data.json
+│   │   │   │   ├── __init__.meta.json
+│   │   │   │   ├── base.data.json
+│   │   │   │   ├── base.meta.json
+│   │   │   │   ├── lang.data.json
+│   │   │   │   ├── lang.meta.json
+│   │   │   │   ├── validate.data.json
+│   │   │   │   └── validate.meta.json
+│   │   │   ├── currency
+│   │   │   │   ├── convert.data.json
+│   │   │   │   └── convert.meta.json
+│   │   │   └── temps
+│   │   │       ├── convert.data.json
+│   │   │       └── convert.meta.json
+│   │   ├── os
+│   │   │   ├── __init__.data.json
+│   │   │   ├── __init__.meta.json
+│   │   │   ├── path.data.json
+│   │   │   └── path.meta.json
+│   │   ├── pathlib
+│   │   │   ├── __init__.data.json
+│   │   │   └── __init__.meta.json
+│   │   ├── pkgutil.data.json
+│   │   ├── pkgutil.meta.json
+│   │   ├── posixpath.data.json
+│   │   ├── posixpath.meta.json
+│   │   ├── re.data.json
+│   │   ├── re.meta.json
+│   │   ├── resource.data.json
+│   │   ├── resource.meta.json
+│   │   ├── sre_compile.data.json
+│   │   ├── sre_compile.meta.json
+│   │   ├── sre_constants.data.json
+│   │   ├── sre_constants.meta.json
+│   │   ├── sre_parse.data.json
+│   │   ├── sre_parse.meta.json
+│   │   ├── subprocess.data.json
+│   │   ├── subprocess.meta.json
+│   │   ├── sys
+│   │   │   ├── __init__.data.json
+│   │   │   └── __init__.meta.json
+│   │   ├── types.data.json
+│   │   ├── types.meta.json
+│   │   ├── typing_extensions.data.json
+│   │   ├── typing_extensions.meta.json
+│   │   ├── typing.data.json
+│   │   └── typing.meta.json
+│   └── CACHEDIR.TAG
+├── .pre-commit-config.yaml
+├── .pytest_cache
+│   ├── .gitignore
+│   ├── CACHEDIR.TAG
+│   ├── README.md
+│   └── v
+│       └── cache
+│           ├── lastfailed
+│           └── nodeids
+├── .ruff_cache
+│   ├── .gitignore
+│   ├── 0.15.14
+│   │   ├── 1451355801140388387
+│   │   └── 7714270373141575944
+│   └── CACHEDIR.TAG
+├── CHANGELOG.md
+├── cli.py
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── Dockerfile
+├── docs
+│   ├── architecture.md
+│   ├── index.md
+│   ├── modules.md
+│   └── usage.md
+├── examples
+│   ├── example_age.sh
+│   ├── example_area.sh
+│   ├── example_bases.sh
+│   ├── example_bitrate.sh
+│   ├── example_calendar.sh
+│   ├── example_color.sh
+│   ├── example_country.sh
+│   ├── example_currency.sh
+│   ├── example_data.sh
+│   ├── example_date.sh
+│   ├── example_energy.sh
+│   ├── example_hash.sh
+│   ├── example_iptools.sh
+│   ├── example_language.sh
+│   ├── example_length.sh
+│   ├── example_morse.sh
+│   ├── example_passwords.sh
+│   ├── example_phonetic.sh
+│   ├── example_power.sh
+│   ├── example_pressure.sh
+│   ├── example_roman.sh
+│   ├── example_speed.sh
+│   ├── example_spoken.sh
+│   ├── example_temps.sh
+│   ├── example_time.sh
+│   ├── example_timezonebot.sh
+│   ├── example_timezones.sh
+│   ├── example_unitsymbols.sh
+│   ├── example_volume.sh
+│   └── example_weight.sh
+├── LICENSE
+├── lumix
+│   ├── __init__.py
+│   ├── age
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── area
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── bases
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── bitrate
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── calendar
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── cli
+│   │   ├── __init__.py
+│   │   └── main.py
+│   ├── color
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── common
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── lang.py
+│   │   └── validate.py
+│   ├── country
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── currency
+│   │   ├── __init__.py
+│   │   ├── api.py
+│   │   ├── cache.py
+│   │   ├── convert.py
+│   │   ├── parser.py
+│   │   └── utils.py
+│   ├── data
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── date
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── energy
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── hash
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── iptools
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── language
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── length
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── morse
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── passwords
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   ├── generate.py
+│   │   └── parser.py
+│   ├── phonetic
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── power
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── pressure
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── roman
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── speed
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── spoken
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── temps
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   ├── parser.py
+│   │   └── utils.py
+│   ├── time
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── timezonebot
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── timezones
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── unitsymbols
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   ├── volume
+│   │   ├── __init__.py
+│   │   ├── convert.py
+│   │   └── parser.py
+│   └── weight
+│       ├── __init__.py
+│       ├── convert.py
+│       └── parser.py
+├── Makefile
+├── mkdocs.yml
+├── output.log
+├── project_structure.txt
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── ROADMAP.md
+├── scripts
+│   └── update_rates.py
+├── SECURITY.md
+└── tests
+    ├── conftest.py
+    ├── test_age.py
+    ├── test_area.py
+    ├── test_bases.py
+    ├── test_bitrate.py
+    ├── test_calendar.py
+    ├── test_cli_integration.py
+    ├── test_color.py
+    ├── test_country.py
+    ├── test_currency.py
+    ├── test_data.py
+    ├── test_date.py
+    ├── test_energy.py
+    ├── test_hash.py
+    ├── test_iptools.py
+    ├── test_language.py
+    ├── test_length.py
+    ├── test_morse.py
+    ├── test_passwords.py
+    ├── test_phonetic.py
+    ├── test_power.py
+    ├── test_pressure.py
+    ├── test_roman.py
+    ├── test_speed.py
+    ├── test_spoken.py
+    ├── test_temps.py
+    ├── test_time.py
+    ├── test_timezonebot.py
+    ├── test_timezones.py
+    ├── test_unitsymbols.py
+    ├── test_volume.py
+    └── test_weight.py
+
+61 directories, 324 files

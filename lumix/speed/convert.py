@@ -15,6 +15,7 @@ _TO_MS = {
     "ms": 1.0,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di velocità a un'altra.
@@ -28,8 +29,8 @@ def convert(value: float, from_unit: str, to_unit: str) -> float:
         float: Valore convertito.
     """
     # Normalizza le unità: sostituisci "/" e rimuovi spazi
-    from_norm = from_unit.lower().replace('/', '').replace(' ', '')
-    to_norm = to_unit.lower().replace('/', '').replace(' ', '')
+    from_norm = from_unit.lower().replace("/", "").replace(" ", "")
+    to_norm = to_unit.lower().replace("/", "").replace(" ", "")
 
     if from_norm not in _TO_MS or to_norm not in _TO_MS:
         raise ValueError(f"Unità non supportata: {from_unit} o {to_unit}")

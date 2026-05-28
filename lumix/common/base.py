@@ -6,12 +6,11 @@ class BaseConverter(ABC):
     @abstractmethod
     def convert(self, value: float, from_unit: str, to_unit: str) -> float:
         """Convert value from one unit to another."""
-        pass
 
     @abstractmethod
     def get_supported_units(self) -> List[str]:
         """Return list of supported units for this converter."""
-        pass
+
 
 class ConverterRegistry:
     _converters: Dict[str, Any] = {}

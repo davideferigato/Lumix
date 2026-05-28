@@ -16,6 +16,7 @@ _TO_PASCAL = {
     "psi": 6894.76,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di pressione a un'altra.

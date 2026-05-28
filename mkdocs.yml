@@ -1,5 +1,5 @@
 site_name: Lumix Documentation
-site_url: https://davideferigato.github.io/Lumix/
+site_url: https://davideFerigato.github.io/Lumix/
 theme:
   name: material
   features:
@@ -10,9 +10,21 @@ theme:
     - scheme: default
       primary: indigo
       accent: indigo
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [lumix]
+          options:
+            show_source: true
+            show_bases: true
+
 nav:
   - Home: index.md
-  - Architecture: docs/architecture.md
-  - Usage: docs/usage.md
-  - Modules Reference: docs/modules.md
-  - Extension Guide: docs/extension.md
+  - Architecture: architecture.md
+  - Usage: usage.md
+  - Modules Reference: modules.md
+  - Extension Guide: extension.md
+  - API Reference: api.md

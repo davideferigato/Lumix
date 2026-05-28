@@ -74,6 +74,7 @@ _LANGUAGE_NAMES = {
     },
 }
 
+
 def code_to_name(code: str, lang: str = "en") -> str:
     """
     Restituisce il nome della lingua per il codice ISO dato, nella lingua specificata.
@@ -83,6 +84,7 @@ def code_to_name(code: str, lang: str = "en") -> str:
         lang = "en"  # fallback
     code = code.lower()
     return _LANGUAGE_NAMES[lang].get(code, f"Unknown code '{code}'")
+
 
 def name_to_code(name: str, lang: str = "en") -> str:
     """

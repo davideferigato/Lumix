@@ -11,11 +11,11 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/davideferigato/lumix)](https://hub.docker.com/r/davideferigato/lumix)
 [![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://davideferigato.github.io/Lumix/)
 
-**Lumix** is a **modular**, **multilingual** command-line converter for physical units, digital data, time, security tools, and creative utilities.  
+**Lumix** is a **modular**, **multilingual** command-line converter for physical units, digital data, time, security tools, and creative utilities.
 Designed to be **easily extensible**, it features **shell autocompletion** – all in one sleek package.
 
-🌐 **Supported languages:** English, Italian, French, Spanish, Japanese.  
-⚙️ **Modular core:** add your own converters in minutes.  
+🌐 **Supported languages:** English, Italian, French, Spanish, Japanese.
+⚙️ **Modular core:** add your own converters in minutes.
 
 ## 📋 Table of contents
 

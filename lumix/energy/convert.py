@@ -19,6 +19,7 @@ _TO_JOULES = {
     "ev": 1.602176634e-19,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di energia a un'altra.

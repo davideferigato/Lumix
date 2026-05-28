@@ -26,6 +26,7 @@ _TO_SECONDS = {
     "settimane": 604800.0,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di tempo a un'altra.

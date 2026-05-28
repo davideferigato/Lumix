@@ -7,7 +7,8 @@ Definisce la funzione convert(src_unit, dst_unit, val) che:
   - Restituisce il risultato formattato a 2 decimali.
 """
 
-_VALID_UNITS = {'C', 'F', 'K'}
+_VALID_UNITS = {"C", "F", "K"}
+
 
 def convert(src, dst, val):
     """
@@ -35,18 +36,18 @@ def convert(src, dst, val):
     # Esegui conversione
     if src == dst:
         result = num
-    elif src == 'C' and dst == 'F':
-        result = (num * 9/5) + 32
-    elif src == 'C' and dst == 'K':
+    elif src == "C" and dst == "F":
+        result = (num * 9 / 5) + 32
+    elif src == "C" and dst == "K":
         result = num + 273.15
-    elif src == 'F' and dst == 'C':
-        result = (num - 32) * 5/9
-    elif src == 'F' and dst == 'K':
-        result = ((num - 32) * 5/9) + 273.15
-    elif src == 'K' and dst == 'C':
+    elif src == "F" and dst == "C":
+        result = (num - 32) * 5 / 9
+    elif src == "F" and dst == "K":
+        result = ((num - 32) * 5 / 9) + 273.15
+    elif src == "K" and dst == "C":
         result = num - 273.15
-    elif src == 'K' and dst == 'F':
-        result = ((num - 273.15) * 9/5) + 32
+    elif src == "K" and dst == "F":
+        result = ((num - 273.15) * 9 / 5) + 32
     else:
         # Combinazione non supportata
         return None

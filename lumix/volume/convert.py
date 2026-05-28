@@ -35,6 +35,7 @@ _TO_LITER = {
     "imperial gallon": 4.54609,
 }
 
+
 def convert(value: float, from_unit: str, to_unit: str) -> float:
     """
     Converte un valore da un'unità di volume a un'altra.
@@ -47,19 +48,29 @@ def convert(value: float, from_unit: str, to_unit: str) -> float:
     Returns:
         float: Valore convertito.
     """
-    from_norm = from_unit.lower().replace(' ', '')
-    to_norm = to_unit.lower().replace(' ', '')
+    from_norm = from_unit.lower().replace(" ", "")
+    to_norm = to_unit.lower().replace(" ", "")
 
     unit_map = {
-        'l': 'l', 'liter': 'l', 'litre': 'l',
-        'ml': 'ml', 'milliliter': 'ml', 'millilitre': 'ml',
-        'm3': 'm3', 'cubicmeter': 'm3',
-        'gal': 'gal', 'gallon': 'gal',
-        'qt': 'qt', 'quart': 'qt',
-        'pt': 'pt', 'pint': 'pt',
-        'cup': 'cup',
-        'floz': 'fl oz', 'fluidounce': 'fl oz',
-        'ukgal': 'uk gal', 'imperialgallon': 'uk gal',
+        "l": "l",
+        "liter": "l",
+        "litre": "l",
+        "ml": "ml",
+        "milliliter": "ml",
+        "millilitre": "ml",
+        "m3": "m3",
+        "cubicmeter": "m3",
+        "gal": "gal",
+        "gallon": "gal",
+        "qt": "qt",
+        "quart": "qt",
+        "pt": "pt",
+        "pint": "pt",
+        "cup": "cup",
+        "floz": "fl oz",
+        "fluidounce": "fl oz",
+        "ukgal": "uk gal",
+        "imperialgallon": "uk gal",
     }
     from_unit_key = unit_map.get(from_norm, from_norm)
     to_unit_key = unit_map.get(to_norm, to_norm)
