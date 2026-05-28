@@ -1,0 +1,18 @@
+site_name: Lumix Documentation
+site_url: https://davideferigato.github.io/Lumix/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+nav:
+  - Home: index.md
+  - Architecture: docs/architecture.md
+  - Usage: docs/usage.md
+  - Modules Reference: docs/modules.md
+  - Extension Guide: docs/extension.md
