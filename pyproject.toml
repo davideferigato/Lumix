@@ -44,7 +44,6 @@ ignore = ["E501"]
 [tool.ruff.lint.isort]
 known-first-party = ["lumix"]
 
-
 [tool.mypy]
 strict = false
 ignore_missing_imports = true
@@ -60,7 +59,3 @@ exclude = [
     "lumix.egg-info",
     "tests",
 ]
-
-[project.readme]
-content-type = "text/markdown"
-file = "README.md"
