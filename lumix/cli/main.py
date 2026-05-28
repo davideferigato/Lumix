@@ -15,6 +15,24 @@ try:
 except ImportError:
     argcomplete = None
 
+def discover_converters():
+    """
+    (Future plugin system) Scansione dinamica dei moduli converter.
+    Attualmente non usata, mantiene la mappa esplicita per stabilità.
+    """
+    import pkgutil
+    import lumix
+    from pathlib import Path
+    converters = {}
+    for module_info in pkgutil.iter_modules(lumix.__path__):
+        module_name = module_info.name
+        if module_name in ('cli', 'common', 'gui', 'tests'):
+            continue
+        parser_path = Path(lumix.__file__).parent / module_name / 'parser.py'
+        if parser_path.exists():
+            converters[module_name] = f"{module_name}.parser"
+    return converters
+
 # Setup shell autocomplete for lang and key
 def setup_autocomplete():
     ac_parser = argparse.ArgumentParser(add_help=False)
@@ -200,27 +218,30 @@ ERROR_MESSAGES = {
     'es': "❌ Valor '{value}' no válido para el idioma '{lang}'",
 }
 
+def run_cli():
+    """Entry point per il comando lumix (chiama main())."""
+    sys.exit(main())
+
 def main():
     if len(sys.argv) < 3:
         print(f"Usage: {sys.argv[0]} <lang> <key> <input...>")
-        sys.exit(1)
+        return 1
 
     lang = sys.argv[1]
     key = sys.argv[2]
     # Tutto ciò che segue la seconda parola
     rest_args = sys.argv[3:]
-    # Uniamo gli argomenti extra in una singola stringa
 
     modules = PARSER_MODULES.get(lang)
     if modules is None:
         print(f"❌ Lingua non riconosciuta: {lang}")
-        sys.exit(1)
+        return 1
 
     module_path = modules.get(key)
     if module_path is None:
         msg = ERROR_MESSAGES.get(lang, "❌ Invalid value '{value}' for language '{lang}'")
         print(msg.format(value=key, lang=lang))
-        sys.exit(1)
+        return 1
 
     # Invoca lo script parser via subprocess
     script_dir = os.path.dirname(__file__)
@@ -230,8 +251,8 @@ def main():
     )
     cmd = [sys.executable, parser_script, lang] + rest_args
     result = subprocess.run(cmd)
-    sys.exit(result.returncode)
+    return result.returncode
 
 if __name__ == '__main__':
     setup_autocomplete()
-    main()
+    sys.exit(main())
