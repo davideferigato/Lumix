@@ -7,8 +7,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Tests](https://github.com/davideFerigato/lumix/actions/workflows/tests.yml/badge.svg)](https://github.com/davideFerigato/lumix/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/davideFerigato/lumix/branch/main/graph/badge.svg)](https://codecov.io/gh/davideFerigato/Lumix)
-[![Docker Pulls](https://img.shields.io/docker/pulls/davideferigato/lumix)](https://hub.docker.com/r/davideferigato/Lumix)
+[![codecov](https://codecov.io/gh/davideFerigato/lumix/branch/main/graph/badge.svg)](https://codecov.io/gh/davideFerigato/lumix)
+[![Docker Pulls](https://img.shields.io/docker/pulls/davideferigato/lumix?cache=refresh)](https://hub.docker.com/r/davideferigato/lumix)
 [![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://davideferigato.github.io/Lumix/)
 
 **Lumix** is a **modular**, **multilingual** command-line converter for physical units, digital data, time, security tools, and creative utilities.
