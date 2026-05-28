@@ -1,37 +1,25 @@
 import datetime
+import sys
 
 try:
     from zoneinfo import ZoneInfo
 
     USE_ZONEINFO = True
 except ImportError:
-    import pytz
+    try:
+        import pytz
 
-    USE_ZONEINFO = False
+        USE_ZONEINFO = False
+    except ImportError:
+        print("Error: pytz not installed. Run: pip install pytz")
+        sys.exit(1)
 
 CITY_TIMEZONE = {
     "tokyo": "Asia/Tokyo",
-    "roma": "Europe/Rome",
     "rome": "Europe/Rome",
     "london": "Europe/London",
     "newyork": "America/New_York",
     "losangeles": "America/Los_Angeles",
-    "chicago": "America/Chicago",
-    "paris": "Europe/Paris",
-    "berlin": "Europe/Berlin",
-    "moscow": "Europe/Moscow",
-    "beijing": "Asia/Shanghai",
-    "hongkong": "Asia/Hong_Kong",
-    "singapore": "Asia/Singapore",
-    "sydney": "Australia/Sydney",
-    "auckland": "Pacific/Auckland",
-    "dubai": "Asia/Dubai",
-    "mumbai": "Asia/Kolkata",
-    "cairo": "Africa/Cairo",
-    "rio": "America/Sao_Paulo",
-    "toronto": "America/Toronto",
-    "vancouver": "America/Vancouver",
-    "sanfrancisco": "America/Los_Angeles",
 }
 
 
