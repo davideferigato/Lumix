@@ -201,8 +201,3 @@ Each module has its own test file (`test_<module>.py`) to ensure reliability.
 
 - [Frankfurter API](https://frankfurter.dev) for real‑time exchange rates.
 - [argcomplete](https://github.com/kislyuk/argcomplete) for shell completion magic.
-- All contributors and users who make this project better.
-
----
-
-**Happy converting! 🚀**
