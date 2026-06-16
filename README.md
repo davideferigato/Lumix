@@ -29,8 +29,6 @@ Designed to be **easily extensible**, it features **shell autocompletion** – a
 - [⏩ Shell Autocompletion](#-shell-autocompletion)
 - [🐳 Docker](#-docker)
 - [🧪 Testing](#-testing)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
 - [🙏 Acknowledgements](#-acknowledgements)
 
 ---
@@ -196,25 +194,6 @@ pytest tests/
 ```
 
 Each module has its own test file (`test_<module>.py`) to ensure reliability.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Whether you want to add a new converter, improve documentation, or fix a bug, please feel free to open an issue or submit a pull request.
-
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/amazing-converter`).
-3. Commit your changes (`git commit -m 'Add amazing converter'`).
-4. Push to the branch (`git push origin feature/amazing-converter`).
-5. Open a Pull Request.
-6. Please make sure to update tests as appropriate.
-
----
-
-## 📄 License
-
-Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
 
