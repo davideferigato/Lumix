@@ -1,20 +1,26 @@
-# 🔄 Lumix
+<p align="center">
+  <img src="docs/images/logo.png" alt="Lumix Logo" width="200">
+</p>
 
-**One CLI to convert everything – from temperature to Morse code, in 5 languages.**
+<p align="center">
+  <em>One CLI to convert everything – from temperature to Morse code, in 5 languages.</em>
+</p>
 
-[![PyPI version](https://img.shields.io/pypi/v/lumix)](https://pypi.org/project/lumix/)
-[![Python versions](https://img.shields.io/pypi/pyversions/lumix)](https://pypi.org/project/lumix/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Tests](https://github.com/davideFerigato/lumix/actions/workflows/tests.yml/badge.svg)](https://github.com/davideFerigato/lumix/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/davideFerigato/lumix/branch/main/graph/badge.svg)](https://codecov.io/gh/davideFerigato/lumix)
-[![Docker Pulls](https://img.shields.io/docker/pulls/davideferigato/lumix)](https://hub.docker.com/r/davideferigato/lumix)
-[![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://davideferigato.github.io/Lumix/)
-[![DOI](https://zenodo.org/badge/1030571578.svg)](https://doi.org/10.5281/zenodo.20709879)
-[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Maintenance](https://img.shields.io/badge/Maintenance-yes-green)](https://github.com/davideFerigato/Lumix)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196)](https://conventionalcommits.org)
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](https://github.com/davideFerigato/Lumix)
+<p align="center">
+  <a href="https://pypi.org/project/lumix/"><img src="https://img.shields.io/pypi/v/lumix" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/lumix/"><img src="https://img.shields.io/pypi/pyversions/lumix" alt="Python versions"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
+  <a href="https://github.com/davideFerigato/lumix/actions/workflows/tests.yml"><img src="https://github.com/davideFerigato/lumix/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+  <a href="https://codecov.io/gh/davideFerigato/lumix"><img src="https://codecov.io/gh/davideFerigato/lumix/branch/main/graph/badge.svg" alt="codecov"></a>
+  <a href="https://hub.docker.com/r/davideferigato/lumix"><img src="https://img.shields.io/docker/pulls/davideferigato/lumix" alt="Docker Pulls"></a>
+  <a href="https://davideferigato.github.io/Lumix/"><img src="https://img.shields.io/badge/docs-mkdocs-blue.svg" alt="Documentation"></a>
+  <a href="https://doi.org/10.5281/zenodo.20709879"><img src="https://zenodo.org/badge/1030571578.svg" alt="DOI"></a>
+  <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white" alt="Pre-commit"></a>
+  <a href="https://github.com/davideFerigato/Lumix"><img src="https://img.shields.io/badge/Maintenance-yes-green" alt="Maintenance"></a>
+  <a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196" alt="Conventional Commits"></a>
+  <a href="https://github.com/davideFerigato/Lumix"><img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="Platform"></a>
+</p>
 
 **Lumix** is a **modular**, **multilingual** command-line converter for physical units, digital data, time, security tools, and creative utilities.
 Designed to be **easily extensible**, it features **shell autocompletion** – all in one sleek package.
