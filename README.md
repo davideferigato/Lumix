@@ -11,15 +11,15 @@
   <a href="https://pypi.org/project/lumix/"><img src="https://img.shields.io/pypi/pyversions/lumix" alt="Python versions"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
   <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
-  <a href="https://github.com/davideFerigato/lumix/actions/workflows/tests.yml"><img src="https://github.com/davideFerigato/lumix/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
-  <a href="https://codecov.io/gh/davideFerigato/lumix"><img src="https://codecov.io/gh/davideFerigato/lumix/branch/main/graph/badge.svg" alt="codecov"></a>
+  <a href="https://github.com/davideferigato/lumix/actions/workflows/tests.yml"><img src="https://github.com/davideferigato/lumix/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+  <a href="https://codecov.io/gh/davideferigato/lumix"><img src="https://codecov.io/gh/davideferigato/lumix/branch/main/graph/badge.svg" alt="codecov"></a>
   <a href="https://hub.docker.com/r/davideferigato/lumix"><img src="https://img.shields.io/docker/pulls/davideferigato/lumix" alt="Docker Pulls"></a>
   <a href="https://davideferigato.github.io/Lumix/"><img src="https://img.shields.io/badge/docs-mkdocs-blue.svg" alt="Documentation"></a>
   <a href="https://doi.org/10.5281/zenodo.20709879"><img src="https://zenodo.org/badge/1030571578.svg" alt="DOI"></a>
   <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white" alt="Pre-commit"></a>
-  <a href="https://github.com/davideFerigato/Lumix"><img src="https://img.shields.io/badge/Maintenance-yes-green" alt="Maintenance"></a>
+  <a href="https://github.com/davideferigato/Lumix"><img src="https://img.shields.io/badge/Maintenance-yes-green" alt="Maintenance"></a>
   <a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196" alt="Conventional Commits"></a>
-  <a href="https://github.com/davideFerigato/Lumix"><img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="Platform"></a>
+  <a href="https://github.com/davideferigato/Lumix"><img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="Platform"></a>
 </p>
 
 **Lumix** is a **modular**, **multilingual** command-line converter for physical units, digital data, time, security tools, and creative utilities.
@@ -103,7 +103,7 @@ pip install lumix
 ### From source
 
 ```bash
-git clone https://github.com/davideFerigato/lumix.git
+git clone https://github.com/davideferigato/lumix.git
 cd lumix
 python -m venv venv && source venv/bin/activate   # or `venv\Scripts\activate` on Windows
 pip install --upgrade pip

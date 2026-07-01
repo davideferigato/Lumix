@@ -1,5 +1,5 @@
 site_name: Lumix Documentation
-site_url: https://davideFerigato.github.io/Lumix/
+site_url: https://davideferigato.github.io/Lumix/
 theme:
   name: material
   features:

@@ -6,8 +6,8 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/lumix)](https://pypi.org/project/lumix/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Tests](https://github.com/davideFerigato/lumix/actions/workflows/tests.yml/badge.svg)](https://github.com/davideFerigato/lumix/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/davideFerigato/lumix/branch/main/graph/badge.svg)](https://codecov.io/gh/davideFerigato/lumix)
+[![Tests](https://github.com/davideferigato/lumix/actions/workflows/tests.yml/badge.svg)](https://github.com/davideferigato/lumix/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/davideferigato/lumix/branch/main/graph/badge.svg)](https://codecov.io/gh/davideferigato/lumix)
 [![Docker Pulls](https://img.shields.io/docker/pulls/davideferigato/lumix)](https://hub.docker.com/r/davideferigato/lumix)
 
 **Lumix** is a **modular**, **multilingual** command-line converter for physical units, digital data, time, security tools, and creative utilities.
@@ -93,7 +93,7 @@ pip install lumix
 ### From source
 
 ```bash
-git clone https://github.com/davideFerigato/lumix.git
+git clone https://github.com/davideferigato/lumix.git
 cd lumix
 python -m venv venv && source venv/bin/activate   # or `venv\Scripts\activate` on Windows
 pip install --upgrade pip
